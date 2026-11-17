@@ -1,0 +1,31 @@
+{
+  "name": "deliveries",
+  "fields": {
+    "reference": {
+      "type": "TEXT",
+      "required": true
+    },
+    "destination": {
+      "type": "TEXT",
+      "required": true
+    },
+    "status": {
+      "type": "TEXT",
+      "required": true,
+      "choices": [
+        "pending",
+        "assigned",
+        "delivered",
+        "failed"
+      ]
+    },
+    "weight_kg": {
+      "type": "REAL",
+      "required": true,
+      "min": 0
+    }
+  },
+  "operations": [
+    "crud"
+  ]
+}
